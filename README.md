@@ -1,5 +1,7 @@
 # DSH 会话产物侧栏插件 (Artifact Sidebar)
 
+**中文版**（本页） · **English**: [README.en.md](README.en.md)
+
 一个用于 **DeepSeek Harness (DSH)** Web GUI 的界面插件：在页面右侧提供可展开/收起的**产物侧栏**，展示**当前会话**在对话过程中实际产生（写入）的文件，支持预览、复制路径、在文件夹中打开、全屏等操作。
 
 - 插件类型：动态 Cordis 插件（Host + Client 双半部）
