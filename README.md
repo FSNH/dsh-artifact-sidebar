@@ -46,6 +46,13 @@
 
 产物文件来自**当前会话日志**中的 `write`/`edit` 工具调用（`sessionQuery.readSession`），兜底扫描会话开始后修改过的工作目录文件。仅通过 bash 直接创建、从未经 write 工具写入的文件不会被记录。
 
+## 界面预览
+<img width="1920" height="1017" alt="产物文件行操作" src="https://github.com/user-attachments/assets/1de508ef-6986-4343-99c4-cc595246b961" />
+<img width="1920" height="1017" alt="侧栏预览功能介绍" src="https://github.com/user-attachments/assets/f5ee3bc2-fcb3-4f39-bd95-8b9a858f729d" />
+<img width="1920" height="1017" alt="全屏预览产物" src="https://github.com/user-attachments/assets/2f66db46-d0d6-420b-b368-7b268ecef044" />
+<img width="1920" height="1017" alt="产物侧栏" src="https://github.com/user-attachments/assets/548c1cb0-8aa9-4b85-a2c3-5b32a64f4d9a" />
+
+
 ## License
 
 未指定（默认保留版权）。
