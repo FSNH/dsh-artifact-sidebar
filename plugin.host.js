@@ -1,5 +1,5 @@
 // ============================================================================
-// 会话产物侧栏插件 — Host 半部（artf-2 / pkg-23）
+// 会话产物侧栏插件 — Host 半部（artf-2 / pkg-24）
 // 用途：作为 cordis_define 的 code.host 函数体。
 // 安装方法见同目录 安装说明.md
 // ============================================================================
@@ -218,8 +218,11 @@ return {
       if (!p) return { ok: false, error: 'missing path' }
       if (sub === undefined) return { ok: false, error: 'subprocess unavailable' }
       try {
+        const norm = p.replace(/[\\/]+$/, '')
+        const dir = norm.replace(/[\\/][^\\/]*$/, '')
+        const target = (dir && /[\\/]/.test(dir)) ? dir : norm
         sub.spawn({
-          argv: ['C:\\Windows\\explorer.exe', '/select,' + p],
+          argv: ['C:\\Windows\\explorer.exe', target],
           cwd: 'C:\\',
           stdio: { stdin: 'ignore', stdout: 'inherit', stderr: 'inherit' },
           graceMs: 5000,
