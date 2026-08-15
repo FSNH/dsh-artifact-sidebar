@@ -46,6 +46,13 @@ A UI plugin for the **DeepSeek Harness (DSH)** Web GUI: an expandable/collapsibl
 
 Artifacts are extracted from **the current session's log** `write`/`edit` tool calls (`sessionQuery.readSession`), with a fallback scan of workspace files modified after the session started. Files created purely via `bash` (never written through the `write` tool) are not recorded.
 
+## Web Preview
+<img width="1920" height="1017" alt="侧栏预览功能介绍" src="https://github.com/user-attachments/assets/68c0dce7-1a91-49ad-98d2-9c18cf8bb070" />
+<img width="1920" height="1017" alt="全屏预览产物" src="https://github.com/user-attachments/assets/4e4f23f2-7222-44df-ba00-973820874306" />
+<img width="1920" height="1017" alt="产物文件行操作" src="https://github.com/user-attachments/assets/301a2596-14fa-4c09-ba5f-d6a0a3a4ce71" />
+<img width="1920" height="1017" alt="产物侧栏" src="https://github.com/user-attachments/assets/90bd5f50-4d81-4cc3-880a-e5929ad73b8b" />
+
+
 ## License
 
 Not specified (copyright reserved by default).
