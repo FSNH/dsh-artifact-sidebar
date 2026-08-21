@@ -16,6 +16,16 @@ Artifact sidebar for the **DeepSeek Harness (DSH) Web GUI**: an expandable/colla
 
 ## Installation (DSH deployment owner)
 
+### ✨ One-command install (recommended)
+
+```bash
+npx dsh-plugin-artifact-sidebar@latest install
+```
+
+Auto-detects `~/.dsh/profiles/*`, writes the dependency and the `cordis.patch.yml` insert row, then runs `npm install`. Idempotent. Uninstall: `npx dsh-plugin-artifact-sidebar@latest uninstall`. Then hard-refresh the page (or restart the service).
+
+### Manual
+
 1. Add the dependency in your DSH profile (`~/.dsh/profiles/<profile>/package.json`):
 
    ```json
