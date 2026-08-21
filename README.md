@@ -42,6 +42,32 @@
 
 > 动态插件为会话级、进程内，重启后需重新定义；详细说明见 `安装说明.md`。
 
+## 安装（部署级，推荐给部署管理员）
+
+已发布为 npm 包 **`dsh-plugin-artifact-sidebar`**（源码见 `deployment-package/`），任何 DSH 部署均可安装，**重启不丢、设置→插件可见、全局生效**：
+
+1. 在 DSH profile 的 `package.json` 添加依赖并安装：
+
+   ```json
+   "dependencies": { "dsh-plugin-artifact-sidebar": "^1.0.0" }
+   ```
+
+   ```bash
+   npm install
+   ```
+
+2. 在 profile 的 `cordis.patch.yml` 追加：
+
+   ```yaml
+   - insert:
+       - id: artifact-sidebar
+         name: dsh-plugin-artifact-sidebar
+   ```
+
+3. 硬刷新页面（开发模式热加载）或重启服务。
+
+> 完整分发说明见仓库 `分发说明.md` 或 npm 包页面。
+
 ## 数据来源
 
 产物文件来自**当前会话日志**中的 `write`/`edit` 工具调用（`sessionQuery.readSession`），兜底扫描会话开始后修改过的工作目录文件。仅通过 bash 直接创建、从未经 write 工具写入的文件不会被记录。
