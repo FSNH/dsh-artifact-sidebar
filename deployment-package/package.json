@@ -1,0 +1,48 @@
+{
+  "name": "dsh-plugin-artifact-sidebar",
+  "version": "1.0.0",
+  "description": "Artifact sidebar for DeepSeek Harness (DSH) Web GUI: expandable right sidebar listing the current session's produced files, with preview, copy-path and open-in-folder.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "artifact",
+    "sidebar",
+    "web-ui"
+  ],
+  "license": "MIT",
+  "author": "FSNH",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FSNH/dsh-artifact-sidebar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FSNH/dsh-artifact-sidebar/issues"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}
