@@ -44,7 +44,17 @@
 
 ## 安装（部署级，推荐给部署管理员）
 
-已发布为 npm 包 **`dsh-plugin-artifact-sidebar`**（源码见 `deployment-package/`），任何 DSH 部署均可安装，**重启不丢、设置→插件可见、全局生效**：
+已发布为 npm 包 **`dsh-plugin-artifact-sidebar`**（源码见 `deployment-package/`），任何 DSH 部署均可安装，**重启不丢、设置→插件可见、全局生效**。
+
+### ✨ 一键安装
+
+```bash
+npx dsh-plugin-artifact-sidebar@latest install
+```
+
+自动检测 `~/.dsh/profiles/*` → 写入依赖与 `cordis.patch.yml` → 执行 `npm install`。幂等可重复运行；卸载用 `npx dsh-plugin-artifact-sidebar@latest uninstall`。完成后**硬刷新页面**（或重启服务）。
+
+### 手动安装
 
 1. 在 DSH profile 的 `package.json` 添加依赖并安装：
 
